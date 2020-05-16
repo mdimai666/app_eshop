@@ -1,0 +1,7 @@
+.bg {
+    @include bg();
+}
+
+.bg-contain {
+    @include bg-contain();
+}

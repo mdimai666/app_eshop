@@ -1,23 +1,23 @@
-using namespace System.IO
+# using namespace System.IO
 
-$oneDriveDir = 'C:\Users\D\OneDrive\AMAI\Share\ShopApp'
+# $oneDriveDir = 'C:\Users\D\OneDrive\AMAI\Share\ShopApp'
 
-Write-Output "copy apk"
-# Copy-Item .\2.txt "$(Get-Date)"
-$dateStamp = Get-Date -UFormat "%Y-%m-%d_%H-%M-%S"
-# Write-Output $dateStamp
+# Write-Output "copy apk"
+# # Copy-Item .\2.txt "$(Get-Date)"
+# $dateStamp = Get-Date -UFormat "%Y-%m-%d_%H-%M-%S"
+# # Write-Output $dateStamp
 
-$fName = 'src-cordova\platforms\android\app\build\outputs\apk\release\app-release.apk'
+# $fName = 'src-cordova\platforms\android\app\build\outputs\apk\release\app-release.apk'
 
-$source = (Get-ChildItem $fName).FullName
-$destination = [System.IO.Path]::GetDirectoryName($source)
+# $source = (Get-ChildItem $fName).FullName
+# $destination = [System.IO.Path]::GetDirectoryName($source)
 
-$ext = [Path]::GetExtension($source)
+# $ext = [Path]::GetExtension($source)
 
-$newName = 'ShopApp-' + $dateStamp + $ext
+# $newName = 'ShopApp-' + $dateStamp + $ext
 
-$destination = [Path]::Combine($oneDriveDir, $newName)
+# $destination = [Path]::Combine($oneDriveDir, $newName)
 
-Write-Output "Copy to -> $destination"
+# Write-Output "Copy to -> $destination"
 
-Copy-Item $source $destination
+# Copy-Item $source $destination
